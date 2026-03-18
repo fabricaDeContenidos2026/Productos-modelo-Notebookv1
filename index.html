@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos fábrica | Catálogo Pro</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+    <div class="version-nav">
+        <button class="btn-v active" onclick="showTab('pro', this)">VERSIÓN PRO</button>
+        <button class="btn-v" onclick="showTab('basic', this)">VERSIÓN NOTEBOOK</button>
+    </div>
+
+    <div id="tab-pro" class="tab-panel active">
+        <div class="pro-body">
+            <header>
+                <div class="logo-box"><img src="img/Cun.png" alt="Cun"></div>
+                <div class="title-container">
+                    <h1 class="main-title">Productos<br>fábrica</h1>
+                    <div class="title-line"></div>
+                </div>
+                <div class="logo-box"><img src="img/fabrica.png" alt="Fabrica"></div>
+            </header>
+            <main>
+                <div class="grid-container">
+                    <div class="card" onclick="openModal('plantilla')"><i class="fas fa-book-open"></i><h3>Plantilla</h3><p>Revista Digital Interactiva</p></div>
+                    <div class="card" onclick="openModal('fichas')"><i class="fas fa-file-contract"></i><h3>Fichas</h3><p>Fichas técnicas</p></div>
+                    <div class="card" onclick="openModal('glosario')"><i class="fas fa-list-ul"></i><h3>Glosario</h3><p>Glosario de términos</p></div>
+                    <div class="card" onclick="openModal('video')"><i class="fas fa-play-circle"></i><h3>Video</h3><p>Introducción a Paz y Desarrollo</p></div>
+                    <div class="card" onclick="openModal('podcast')"><i class="fas fa-headset"></i><h3>Podcast</h3><p>Escuchemos Expertos</p></div>
+                    <div class="card" onclick="openModal('descargables')"><i class="fas fa-download"></i><h3>Descargables</h3><p>Visualizar y Descargar PDFs</p></div>
+                </div>
+            </main>
+            <div id="overlay" class="overlay">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="modal-title" style="font-family:'Montserrat';"></h2>
+                        <button class="close-btn" onclick="closeModal()">✕</button>
+                    </div>
+                    <div class="modal-body" id="modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tab-basic" class="tab-panel">
+        <div class="basic-view">
+            <div class="nb-container">
+                <div class="nb-header">
+                    <h1>Fuentes de información</h1>
+                    <p>Documentos y recursos multimedia del proyecto</p>
+                </div>
+                <div class="basic-grid">
+                    <div class="basic-block">
+                        <h3><i class="fas fa-video"></i> Video Principal</h3>
+                        <div class="basic-media-box">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e_kR9XKfwLI?si=D4GGWdIG_OMxUhPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="file-info">Origen: YouTube (e_kR9XKfwLI)</p>
+                        <a href="https://www.youtube.com/watch?v=e_kR9XKfwLI" target="_blank" class="btn-descarga">Ver en YouTube</a>
+                    </div>
+                    <div class="basic-block">
+                        <h3><i class="fas fa-file-pdf"></i> Revista PDF</h3>
+                        <div class="basic-media-box"><i class="fas fa-file-pdf" style="font-size:4rem; color:#ea4335; opacity:0.8;"></i></div>
+                        <p class="file-info">src: img/revista.pdf</p>
+                        <a href="img/revista.pdf" target="_blank" class="btn-descarga">Abrir documento</a>
+                    </div>
+                    <div class="basic-block">
+                        <h3><i class="fas fa-image"></i> Infografía</h3>
+                        <div class="basic-media-box"><img src="img/infografia.jpg" alt="Infografía"></div>
+                        <p class="file-info">src: img/infografia.jpg</p>
+                        <a href="img/infografia.jpg" target="_blank" class="btn-descarga">Ver imagen completa</a>
+                    </div>
+                    <div class="basic-block">
+                        <h3><i class="fas fa-project-diagram"></i> Mapa Mental</h3>
+                        <div class="basic-media-box"><img src="img/mapamental.png" alt="Mapa Mental"></div>
+                        <p class="file-info">src: img/mapamental.png</p>
+                        <a href="img/mapamental.png" target="_blank" class="btn-descarga">Ver mapa</a>
+                    </div>
+                    <div class="basic-block">
+                        <h3><i class="fas fa-table"></i> Tabla de Datos</h3>
+                        <div class="basic-media-box"><img src="img/tabla.png" alt="Tabla"></div>
+                        <p class="file-info">src: img/tabla.png</p>
+                        <a href="img/tabla.png" target="_blank" class="btn-descarga">Ver tabla</a>
+                    </div>
+                    <div class="basic-block">
+                        <h3><i class="fas fa-clipboard-list"></i> Fichas Técnicas</h3>
+                        <div class="basic-media-box"><img src="img/fichapregunta.png" alt="Ficha"></div>
+                        <p class="file-info">src: img/fichas...</p>
+                        <div style="display:flex; gap:10px;">
+                            <a href="img/fichapregunta.png" target="_blank" class="btn-descarga" style="flex:1;">Pregunta</a>
+                            <a href="img/ficharespuesta.png" target="_blank" class="btn-descarga" style="flex:1;">Respuesta</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nb-footer">Generado por Fábrica de Contenidos - Estética Notebook Estándar</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tab, btn) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.btn-v').forEach(b => b.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        const contentData = {
+            plantilla: {
+                title: "Revista Digital Interactiva",
+                desc: "Experiencia contemplativa que fusiona diseño y esencia para absorber el núcleo de la materia, y generar así una recordación profunda. Un formato dinámico ideal para conectar con el contenido de manera pausada y visualmente impactante.",
+                media: `<div style="position:relative;padding-top:max(60%,324px);width:100%;height:0;"><iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/mjlzw/G1-mEpZ/" title="G1" seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe></div>`,
+                link: "https://online.fliphtml5.com/mjlzw/G1-mEpZ/"
+            },
+            fichas: {
+                title: "Fichas Técnicas",
+                desc: "Herramientas interactivas de bolsillo diseñadas para un estudio ágil, práctico y constante. Garantizan que la información clave esté siempre disponible, facilitando la retención de conceptos de manera estratégica.",
+                media: `<iframe src="https://embed.figma.com/proto/Y4HYoJIVfXMkTeFhEOnV6w/Sin-t%C3%ADtulo?page-id=0%3A1&node-id=1-2&viewport=193%2C575%2C0.25&scaling=min-zoom&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>`,
+                link: "https://www.figma.com/proto/Y4HYoJIVfXMkTeFhEOnV6w/Sin-t%C3%ADtulo"
+            },
+            glosario: {
+                title: "Glosario",
+                desc: "Compendio de terminología técnica y conceptos fundamentales para el dominio de la carrera. Funciona como la hoja de ruta esencial para proyectar rigor profesional y manejar el lenguaje del éxito en el sector.",
+                media: `<iframe src="https://embed.figma.com/proto/gUVBNE7hqyNalVOQz2BOLj/Sin-t%C3%ADtulo?page-id=0%3A1&node-id=1-2&viewport=595%2C274%2C0.06&scaling=contain&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>`,
+                link: "https://www.figma.com/proto/gUVBNE7hqyNalVOQz2BOLj/Sin-t%C3%ADtulo"
+            },
+            video: {
+                title: "Video Tutorial",
+                desc: "Pieza de composición corporativa minuciosamente estructurada bajo una visión de emprendimiento. Articula el concepto, el planteamiento del problema y la resolución para comunicar soluciones con la claridad y fuerza de un líder.",
+                media: `<iframe src="https://www.youtube.com/embed/mtu-8xWmz0g" frameborder="0" allowfullscreen></iframe>`,
+                link: "https://www.youtube.com/watch?v=mtu-8xWmz0g"
+            },
+            podcast: {
+                title: "Podcast",
+                desc: "Inmersión auditiva donde expertos en la materia exponen la realidad del sector desde la experiencia. Un espacio de alto valor que analiza los desafíos reales y transforma la perspectiva profesional técnica.",
+                media: `<iframe width="560" height="315" src="https://www.youtube.com/embed/g3agu5Uy13c?si=HUCwkViDb3LZtOZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`,
+                link: "https://www.youtube.com/watch?v=g3agu5Uy13c"
+            },
+            descargables: {
+                title: "Biblioteca de Archivos PDF",
+                desc: "Documentación técnica descargable (Guías G1 a G6).",
+                isPDFList: true,
+                files: [
+                    { name: "G1: Conceptualización", id: "G1.pdf" },
+                    { name: "G2: Teorías de Desarrollo", id: "G2.pdf" },
+                    { name: "G3: Enfoque Territorial", id: "G3.pdf" },
+                    { name: "G4: Esquemas Asociativos", id: "G4.pdf" },
+                    { name: "G5: Planes de Desarrollo", id: "G5.pdf" },
+                    { name: "G6: Programas Enfoque Territ.", id: "G6.pdf" }
+                ]
+            }
+        };
+
+        function openModal(key) {
+            const data = contentData[key];
+            const modalBody = document.getElementById('modal-body');
+            document.getElementById('modal-title').innerText = data.title;
+            if (data.isPDFList) {
+                let gridHTML = `<p style="margin-bottom:20px; color:#cbd5e1;">${data.desc}</p><div class="pdf-grid">`;
+                data.files.forEach(file => {
+                    gridHTML += `<div class="pdf-card"><span style="font-weight:bold; font-size:0.85rem;"><i class="fas fa-file-pdf" style="color:var(--secondary); margin-right:8px;"></i>${file.name}</span><div style="display:flex; gap:10px;"><button onclick="previewPDF('img/${file.id}')" class="btn-action" style="flex:1;">Ver</button><a href="img/${file.id}" download class="btn-action" style="flex:1;">Bajar</a></div></div>`;
+                });
+                gridHTML += `</div><div id="pdf-viewer" class="media-box" style="display:none; margin-top:30px; height:600px;"></div>`;
+                modalBody.innerHTML = gridHTML;
+            } else {
+                modalBody.innerHTML = `<p style="margin-bottom:15px; color:#cbd5e1;">${data.desc}</p><div class="media-box">${data.media}</div><div style="text-align:center; margin-top:20px;"><a href="${data.link}" target="_blank" class="btn-action">Pantalla Completa</a></div>`;
+            }
+            document.getElementById('overlay').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function previewPDF(path) {
+            const viewer = document.getElementById('pdf-viewer');
+            viewer.innerHTML = `<iframe src="${path}#toolbar=0"></iframe>`;
+            viewer.style.display = 'block'; viewer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeModal() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('modal-body').innerHTML = '';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
